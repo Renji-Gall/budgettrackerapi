@@ -16,8 +16,10 @@ const jwt = require('jsonwebtoken');
 app.set('view engine', 'ejs');
 
 app.use(cors({
-  origin: 
-  'http://localhost:3000', // React app URL
+  origin: [
+    'http://localhost:3000',
+    'https://budgettracker-omega.vercel.app'
+  ],
   methods: ['GET', 'POST', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }))
